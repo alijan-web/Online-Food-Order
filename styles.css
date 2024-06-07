@@ -7,6 +7,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #191919;
+    font-family: sans-serif;
 }
 
     /* Heading Line */
@@ -21,3 +22,92 @@ body {
     font-size: 14px; /* Default responsive font size */
 }
 
+
+    /* Navber Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1px 20px;
+        background-color: #191919;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .logo img {
+        width: 100px;
+        height: 70px;
+    }
+    
+    .search-container {
+        position: relative;
+        flex-grow: 1;
+        margin: 0 20px;
+    }
+    
+    .search-container input {
+        width: 100%;
+        padding: 10px 40px 10px 15px;
+        border: 1px solid rgb(255, 59, 59);
+        border-left: 2px solid rgb(255, 59, 59);
+        border-right: 2px solid rgb(255, 59, 59);
+        border-radius: 20px;
+        outline: none;
+        font-size: 16px;
+        background-color: #191919;
+        color: white;
+    }
+    
+    .search-container .search-icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fafafa;
+    }
+    
+    .icons {
+        display: flex;
+        align-items: center;
+    }
+    
+    .icons .fas {
+        font-size: 20px;
+        color: #fdfdfd;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .search-container {
+            margin: 0 10px;
+        }
+    
+        .icons .fas {
+            font-size: 18px;
+            margin-left: 15px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .search-container {
+            width: 100%;
+            margin: 10px 0;
+        }
+    
+        .icons {
+            margin-top: 5px;
+        }
+        .search-container input {
+            margin-top: -20px;
+        }
+        .search-container .search-icon {
+            top: 35%;
+        }
+    }
+    
